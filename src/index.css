@@ -53,11 +53,10 @@ ul {
 /* forms */
 label {
   display: block;
-  margin: 24px auto;
+  margin: 10px auto;
 }
 label span {
   display: block;
-  margin-bottom: 6px;
 }
 input,
 textarea {
