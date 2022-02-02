@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import { useAuthContext } from "./hooks/useAuthContext";
 import PrivateRoute from "./protectedRoute/PrivateRoute";
+import OnlineUsers from "./components/OnlineUsers";
 
 function App() {
   const { authIsReady, user } = useAuthContext();
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          <Sidebar />
+          {user && <Sidebar />}
           <div className="container">
             <Navbar />
             <Routes>
@@ -36,6 +37,7 @@ function App() {
               />
             </Routes>
           </div>
+          {user && <OnlineUsers />}
         </BrowserRouter>
       )}
     </div>
