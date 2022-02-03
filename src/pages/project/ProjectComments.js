@@ -25,7 +25,6 @@ const ProjectComments = ({ project }) => {
       setNewComment("");
     }
   };
-  console.log(project.comment.length);
   return (
     <div className="project-comments">
       <h4>Project Comments </h4>

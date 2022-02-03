@@ -92,7 +92,7 @@ export const useFirestore = (collection) => {
         type: "UPDATED_DOCUMENT",
         payload: updateDocument,
       });
-      return updateDocument;
+      return updatedDocument;
     } catch (error) {
       dispatchIfNotCancelled({ type: "ERROR", payload: error.message });
       return null;
